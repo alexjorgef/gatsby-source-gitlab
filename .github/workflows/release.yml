@@ -46,7 +46,7 @@ jobs:
         run: yarn --immutable
 
       - name: Publish package to npmjs
-        run: yarn package:publish
+        run: yarn package:cipublish
 
   release-github:
     name: Release to GitHub
@@ -85,6 +85,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish package to GitHub
-        run: yarn package:publish
+        run: yarn package:cipublish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
